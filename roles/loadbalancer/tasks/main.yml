@@ -1,13 +1,13 @@
 ---
-- name: enable proxy module via shell because there is a bug 
+- name: enable proxy module
   shell: /usr/sbin/a2enmod proxy 
   notify: Restart Apache2
 
-- name: enable proxy_balancer module via shell because there is a bug 
+- name: enable proxy_balancer module
   shell: /usr/sbin/a2enmod proxy_balancer 
   notify: Restart Apache2
 
-- name: enable proxy_http module via shell because there is a bug 
+- name: enable proxy_http module
   shell: /usr/sbin/a2enmod proxy_http
   notify: Restart Apache2
 
