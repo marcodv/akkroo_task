@@ -1,4 +1,8 @@
 ---
+- name: install apache2
+  apt: name=apache2 state=present
+  notify: Start Apache2
+
 - name: enable proxy module
   shell: /usr/sbin/a2enmod proxy 
   notify: Restart Apache2

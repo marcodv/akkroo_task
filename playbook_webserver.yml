@@ -2,5 +2,4 @@
 - hosts: webservers
   sudo: True
   roles:
-    - common
     - webserver

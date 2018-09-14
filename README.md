@@ -33,8 +33,8 @@ Bringing machine 'load_balancer' up with 'virtualbox' provider...
 
 Once the instances are up and running, Vagrnat will call Ansible for provision them follow the definition of roles associate to each of them.
 The definition of which role is applied to the instance is given from the playbooks in the project. For example
-* playbook_webserver.yml will apply the roles webserver and common to the webserver instances
-* playbook_loadbalancer.yml will apply the roles loadbalancer and common to the load_balancer instance
+* playbook_webserver.yml will apply the role webserver to the webserver instances
+* playbook_loadbalancer.yml will apply the role loadbalancer to the load_balancer instance
 
 #### Testing 
 Once that all the instances are up and provisioned, you can reach the IP address of the loadbalancer which is http://10.0.15.11/ .
