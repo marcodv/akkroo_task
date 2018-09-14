@@ -1,6 +1,16 @@
 # Infrastructure blueprint for Akkroo task
-Spin up small infrastracture made of 2 webserver and 1 loadbalancer. This infrastructure is generate with Vagrant and all the instances are provisioned with Ansible.
-Once that the infrastrucutre is up and running [go here](http://10.0.15.11/) and you will see the loadbalancer reply to your requests.
+Spin up small infrastracture made of 2 webserver and 1 loadbalancer based on Ubuntu precise64 and use Apache2 as webserver
+
+This infrastructure is generate with Vagrant and all the instances are provisioned with Ansible.
+Once that the infrastrucutre is up and running [go here](http://10.0.15.11/) and you will see the loadbalancer reply to your requests like in the example below 
+
+
+```
+Vagrant box details
+Hello world
+Served by web1 (10.0.15.21).
+
+```
 
 # Tech
 For this tasks I used the following softwares
