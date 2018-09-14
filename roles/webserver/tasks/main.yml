@@ -14,7 +14,7 @@
   file: path=/var/www/* state=absent
   ignore_errors: True 
 
-#Generates web page based on ansible varibales
+#Generates web page based on ansible variables
 - name: deploy website content
   template: src=index.html dest=/var/www/index.html
 
