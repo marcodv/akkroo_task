@@ -72,5 +72,5 @@ $ curl http://10.0.15.11/
 
 #### Documentation
 I've followed the below documentations for deploy this project
-See [Ansible 2.6 documentation](https://docs.ansible.com/ansible/2.6/)
-See [Vagrant](https://www.vagrantup.com/docs/)
+* See [Ansible 2.6 documentation](https://docs.ansible.com/ansible/2.6/) 
+* See [Vagrant](https://www.vagrantup.com/docs/)

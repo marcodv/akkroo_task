@@ -36,6 +36,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
           end
 	end
       end
+    end
 
     # create load balancer
     config.vm.define "load_balancer" do |lb_config|
@@ -53,5 +54,4 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
           ansible.groups = groups
 	end
     end
-end
 end
