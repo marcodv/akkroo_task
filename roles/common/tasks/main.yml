@@ -1,0 +1,7 @@
+---
+- name: Install Apache2
+  apt: pkg=apache2 state=present update_cache=true
+  register: apache2installed
+  notify:
+    - Start Apache2
+
