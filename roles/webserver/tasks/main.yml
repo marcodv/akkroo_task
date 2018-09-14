@@ -1,0 +1,26 @@
+---
+- name: install apache2
+  apt: name=apache2 state=present
+
+- name: write our apache2.conf
+  template: src=apache2.conf dest=/etc/apache2/apache2.conf
+  notify: Restart Apache2
+
+- name: write our /etc/apache2/sites-available/default
+  template: src=default dest=/etc/apache2/sites-available/default
+  notify: Restart Apache2
+
+- name: clean existing website content
+  file: path=/var/www/* state=absent
+  ignore_errors: True 
+
+#Generates web page based on ansible varibales
+- name: deploy website content
+  template: src=index.html dest=/var/www/index.html
+
+- name: enable configuration
+  file: >
+    dest=/etc/apache2/sites-enabled/default
+    src=/etc/apache2/sites-available/default
+    state=link
+
