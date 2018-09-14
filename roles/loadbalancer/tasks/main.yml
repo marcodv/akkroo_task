@@ -1,0 +1,24 @@
+---
+- name: enable proxy module via shell because there is a bug 
+  shell: /usr/sbin/a2enmod proxy 
+  notify: Restart Apache2
+
+- name: enable proxy_balancer module via shell because there is a bug 
+  shell: /usr/sbin/a2enmod proxy_balancer 
+  notify: Restart Apache2
+
+- name: enable proxy_http module via shell because there is a bug 
+  shell: /usr/sbin/a2enmod proxy_http
+  notify: Restart Apache2
+
+- name: copy apache2 config file for the loadbalancer
+  template:  src=apache2-load-balancer.conf dest=/etc/apache2/conf.d/lb.conf
+  notify: Restart Apache2
+
+- name: enable configuration
+  file: >
+    dest=/etc/apache2/sites-enabled/default
+    src=/etc/apache2/sites-available/default
+    state=link
+  notify: Restart Apache2
+
